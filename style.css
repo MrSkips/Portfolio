@@ -27,3 +27,176 @@ a:focus-visible,button:focus-visible{outline-color:#d71920}
 .project-band.cream .learn-more{color:#000000;background:var(--gold);border-color:var(--gold)}
 .project-band.cream .learn-more:hover{color:#ffffff;background:#000000;border-color:#000000}
 .project-band.cream a:focus-visible{outline-color:#ffffff}
+
+/* Project pages carry the same section colors as their homepage cards. */
+.detail-gold {
+  --project-color: var(--gold);
+}
+
+.detail-red {
+  --project-color: var(--red);
+  --project-ink: #ffffff;
+}
+
+.detail-gray {
+  --project-color: var(--stone);
+}
+
+.detail {
+  padding-top: 0;
+}
+
+.detail-hero {
+  background: var(--project-color);
+  color: var(--project-ink, var(--ink));
+}
+
+.detail-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(30px, 6vw, 84px);
+  padding-top: clamp(34px, 5vw, 70px);
+  padding-bottom: clamp(34px, 5vw, 70px);
+}
+
+.detail-intro .back,
+.detail-intro .eyebrow,
+.detail-heading > p:last-child {
+  color: inherit;
+}
+
+.detail-intro .back {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.detail-red .back:focus-visible,
+.detail-red .poster-cover:focus-visible {
+  outline-color: #ffffff;
+}
+
+.detail-intro .detail-heading {
+  padding: 30px 0 0;
+}
+
+.detail-heading .eyebrow {
+  font-size: 10px;
+}
+
+.detail-heading h1 {
+  font-size: clamp(36px, 4.4vw, 58px);
+  line-height: 1.08;
+}
+
+.detail-media .detail-cover {
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.detail-media .poster-cover {
+  background: #ffffff;
+  padding: 12px;
+}
+
+.detail-media .poster-cover img {
+  width: 100%;
+  height: auto;
+}
+
+.detail-media .repair-cover {
+  background: var(--ink);
+  color: #ffffff;
+  min-height: clamp(180px, 23vw, 290px);
+  padding: 24px;
+  gap: clamp(8px, 1vw, 16px);
+  flex-wrap: wrap;
+  font-size: clamp(10px, 1.2vw, 15px);
+}
+
+.detail-media .repair-cover span:nth-child(even) {
+  color: var(--gold);
+}
+
+.detail-content .facts {
+  gap: 20px;
+  padding: 24px 0;
+}
+
+.detail-content .facts span {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.detail-content .facts p {
+  font-size: 14px;
+}
+
+.detail-content .detail-text h2,
+.detail-content .gallery-section h2,
+.detail-project-links h2 {
+  font-size: clamp(24px, 3vw, 32px);
+}
+
+.detail-content .detail-text p {
+  font-size: 15px;
+}
+
+.detail-content .stage-grid button {
+  background: var(--stone);
+  border-bottom: 3px solid var(--gold);
+}
+
+.detail-content .stage-grid button:hover > span {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.detail-project-links {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.detail-project-links h2 {
+  margin-bottom: 18px;
+}
+
+.detail-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.detail-project-grid a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.detail-project-grid a:hover {
+  background: var(--stone);
+}
+
+@media (max-width: 720px) {
+  .detail-hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .detail-intro .detail-heading {
+    padding-top: 24px;
+  }
+
+  .detail-project-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
